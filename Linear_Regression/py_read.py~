@@ -1,0 +1,33 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = pd.read_csv('Advertising.csv')
+print(data)
+print('-------------------------------------------------------------')
+print('------------------------------------------------------------')
+print('Shape is: ',data.shape)
+print('-------------------------------------------------------------')
+print('------------------------------------------------------------')
+print('Columns are: ', data.columns)
+print('-------------------------------------------------------------')
+print('------------------------------------------------------------')
+print('dtypes: ', data.dtypes)
+print('-------------------------------------------------------------')
+print('-------------------------------------------------------------')
+print('DATA INFORMATION')
+print(data.info())
+print('------------------------------------------------------------')
+print('------------------------------------------------------------')
+print('DATA DESCRIPTION')
+print(data.describe())
+print('------------------------------------------------------------')
+print('------------------------------------------------------------')
+print('SUM OF NULL VALUES')
+print(data.isnull().sum())
+print('------------------------------------------------------------')
+print('------------------------------------------------------------')
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzsns.zzzzzzzzzzzzzzzzzzzzzzzzzzzpairplot(data.drop.)zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzffffzzzzzzzzzzzzzzzzz
+plt.savefig('pairplot.pngzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')zzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzz
