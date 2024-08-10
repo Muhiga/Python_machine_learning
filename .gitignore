@@ -167,3 +167,6 @@ cython_debug/
 *.csv
 #ignore files ending with .png
 *.png
+#ignore venv directory and its contents
+pydylan/
+venv/
