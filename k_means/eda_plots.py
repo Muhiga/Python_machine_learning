@@ -47,7 +47,7 @@ def distribution_plots(df,output_dir, hue=None):
     sns.scatterplot(data=df, x='petal_length', y='petal_width', hue='target')
     plt.title('Scatter Plot')
     plt.savefig(os.path.join(output_dir, 'Scatter Plot'))
-output_directory = 'eda_plots'
+output_directory = 'plots'
 
 if __name__=='__main__':
     distribution_plots(data, output_directory)
