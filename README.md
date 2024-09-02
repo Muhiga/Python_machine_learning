@@ -23,4 +23,4 @@ This repository is a collection of different machine learning models implemented
 To run any of the models in this repository, you will need to have Python installed on your system. You can install the required packages using `pip` and the `requirements.txt` file provided in each model directory.
 
 1. Clone the repository:
- 
+2. 
