@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import  accuracy_score, confusion_matrix, classification_report
 
 data=pd.read_csv('Social_Network_Ads.csv', index_col=0)
 
@@ -37,5 +38,24 @@ print(f'Shape of x_test is {x_test.shape}')
 print(f'Shape of y_test is {y_test.shape}')
 print('============================')
 
+##Model Implimentatio
 
+#We start with n=5
+model=KNeighborsClassifier(n_neighbors=5)
+model.fit(x_train, y_train)
+y_pred=model.predict(x_test)
 
+#model evaluation
+accuracy=accuracy_score(y_test,y_pred)
+print(f'Accuracy Score is {accuracy*100:2f}%')
+print(f'Confusion Matrix is: \n {confusion_matrix(y_test, y_pred)}')
+print(f'Classifiaction report: \n {classification_report(y_test, y_pred)}')
+print('END')
+
+#Fine tune the model
+for k in range(1, 31):
+	model=KNeighborsClassifier(n_neighbors=k)
+	model.fit(x_train, y_train)
+	y_pred=model.predict(x_test)
+	print(f'k = {k}, Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%')
+	
