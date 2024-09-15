@@ -163,8 +163,7 @@ cython_debug/
 
 #ignore files ending with ~
 *~
-#ignore files ending with .csv
-*.csv
+
 #ignore files ending with .png
 *.png
 #ignore venv directory and its contents
